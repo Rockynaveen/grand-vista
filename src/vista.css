@@ -1,0 +1,1332 @@
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden !important;
+
+    }
+
+    .hero {
+      height: 100vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+        url("bg.webp");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      display: flex;
+      align-items: center;
+
+    }
+    .room-img {
+  cursor: default !important;
+}
+
+
+    .hero h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+
+    /* ////////amenities/////// */
+    /* .amenity-card {
+        background: #fff;
+        border-radius: 20px;
+        padding: 30px;
+        transition: .3s;
+    }
+
+    .amenity-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, .15);
+    } */
+    /* ===== AMENITIES FLIP CARDS ===== */
+
+    .amenity-card {
+      height: 230px;
+      perspective: 1000px;
+    }
+
+    .marquee {
+      overflow: hidden !important;
+    }
+
+    /* ===== MOBILE OVERFLOW FIX ===== */
+    html,
+    body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    /* Prevent Bootstrap row overflow */
+    .row {
+      margin-left: 0;
+      margin-right: 0;
+    }
+
+    /* Images safety */
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* Marquee / animated sections */
+    .marquee {
+      overflow: hidden;
+    }
+
+    .amenity-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 20px;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease;
+    }
+
+    .amenity-card:hover .amenity-inner {
+      transform: rotateY(180deg);
+    }
+
+    .amenity-front,
+    .amenity-back {
+      position: absolute;
+      inset: 0;
+      border-radius: 20px;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      backface-visibility: hidden;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .amenity-front {
+      background: #ffffff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .amenity-front i {
+      color: #f4b400;
+    }
+
+    .amenity-back {
+      background: linear-gradient(135deg, #2d0a1f, #5a0f3a);
+      color: #ffffff;
+      transform: rotateY(180deg);
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .amenity-card {
+        height: 200px;
+      }
+    }
+
+    /* FOOTER */
+    footer {
+      background: #1f2933;
+      color: #ccc;
+    }
+
+    .room-arrow-btn {
+      width: 90px;
+      height: 56px;
+      border-radius: 40px;
+      color: black;
+      font-size: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s ease;
+    }
+
+    .room-arrow-btn:hover {
+      transform: translateY(-3px);
+      color: blue;
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #c9a24d;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .contact-icon:hover {
+      background: #b18f3c;
+      transform: translateY(-3px);
+    }
+
+    .footer-section {
+      background: linear-gradient(135deg, #1a1a1a, #000);
+      color: #ccc;
+    }
+
+    .footer-title {
+      color: #c9a24d;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .footer-text {
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-links li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    .footer-links a {
+      text-decoration: none;
+      color: #ccc;
+      transition: 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: #c9a24d;
+    }
+
+    .footer-social {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: #c9a24d;
+      color: #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: 0.3s;
+    }
+
+    .footer-social:hover {
+      background: #b18f3c;
+      transform: translateY(-3px);
+    }
+
+    .footer-divider {
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-bottom {
+      font-size: 14px;
+      color: #aaa;
+    }
+
+    /* ROOM CARD HOVER EFFECT */
+    #rooms .carousel-inner .col-md-4 {
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      cursor: pointer;
+    }
+
+    #rooms .carousel-inner .col-md-4:hover {
+      transform: scale(1.05);
+      z-index: 10;
+
+    }
+
+    #rooms .carousel-inner .col-md-4:hover h5 {
+      color: #c9a24d;
+      /* gold accent */
+    }
+
+    #rooms .carousel-inner .col-md-4:hover p {
+      color: #444;
+    }
+
+    .hover-scale:hover {
+      transform: scale(1.2);
+      transition: 0.3s;
+    }
+
+    .form-control:focus {
+      box-shadow: 0 0 8px rgba(255, 140, 66, 0.5);
+      border-color: #ff8c42;
+    }
+
+    .btn-gradient:hover {
+      background: linear-gradient(135deg, #ff8c42, #ffb347);
+    }
+    /* ROOM CARD BASE */
+.room-card {
+  background: #fff;
+  border-radius: 14px;
+  padding: 18px;
+  transition: all 0.35s ease;
+  position: relative;
+}
+
+/* IMAGE STAYS FIXED */
+.room-img-fixed {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: filter 0.35s ease;
+}
+
+/* HOVER EFFECT (NO ZOOM) */
+.room-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.15);
+  /* margin:10px 10px !important; */
+}
+
+.room-card:hover .room-img-fixed {
+  filter: brightness(0.85);
+}
+.room-card img {
+  transition: none;
+  transform: none !important;
+}
+
+    .room-img {
+      transition: transform 0.5s ease, box-shadow 0.5s ease;
+      cursor: pointer;
+    }
+
+    .room-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+      z-index: 10;
+    }
+
+    /* -------gallery---------- */
+    .gallery-item {
+      height: 260px;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    /* ===== WHY CHOOSE US (MARQUEE) ===== */
+    .why-choose-us {
+      background: #f8f9fa;
+      overflow: hidden;
+    }
+
+    .marquee-track {
+      display: flex;
+      animation: marquee 25s linear infinite;
+    }
+
+    .marquee:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    .why-card {
+      min-width: 260px;
+      margin: 0 15px;
+      background: #fff;
+      padding: 25px;
+      text-align: center;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .08);
+      transition: transform .3s;
+    }
+
+    .why-card:hover {
+      transform: translateY(-10px);
+    }
+
+    @keyframes marquee {
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* ===== ROOMS ===== */
+    #rooms .room-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #rooms .room-img-fixed {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, .15);
+      transition: transform .35s ease, box-shadow .35s ease;
+    }
+
+    #rooms .room-img-fixed:hover {
+      transform: scale(1.05);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .25);
+    }
+
+    #rooms .room-price {
+      color: #c9a24d;
+      font-size: 18px;
+    }
+
+    .room-arrow-btn {
+      width: 90px;
+      height: 56px;
+      border-radius: 40px;
+      font-size: 22px;
+      transition: .3s;
+    }
+
+    .room-arrow-btn:hover {
+      transform: translateY(-3px);
+      color: #0d6efd;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar-custom {
+      background: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(6px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .navbar-dark .nav-link {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .navbar-dark .nav-link:hover {
+      color: #ffc107;
+    }
+
+    section {
+      scroll-margin-top: 100px;
+      /* adjust to your navbar height */
+    }
+
+    #scrollTopBtn {
+      position: fixed;
+      bottom: 30px;
+      right: 15px;
+      width: 55px;
+      height: 55px;
+      border-radius: 60%;
+      background: linear-gradient(135deg, #ffb347, #ff8c42);
+      color: #fff;
+      border: none;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: .3s;
+    }
+
+    #scrollTopBtn:hover {
+      transform: translateY(-6px);
+    }
+
+    .hero h1 {
+      color: aqua;
+    }
+
+    /* CENTER HERO TEXT */
+    .carousel-caption {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      bottom: auto;
+      text-align: center;
+    }
+
+    /* DARK OVERLAY */
+    .hero-carousel .carousel-item::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* ENSURE IMAGE FITS */
+    .hero-carousel .carousel-item img {
+      height: 100vh;
+      object-fit: cover;
+    }
+
+    .head1 {
+      color: aqua
+    }
+
+    /* /////////////    */
+    /* WHY CHOOSE US SECTION */
+    .why-choose-us {
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: #fff;
+      overflow: hidden;
+    }
+
+    /* Section Title */
+    .why-choose-us h2 {
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    /* MARQUEE WRAPPER */
+    .marquee {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+      padding: 30px 0;
+    }
+
+    /* MARQUEE TRACK */
+    .marquee-track {
+      display: flex;
+      gap: 25px;
+      width: max-content;
+      animation: scroll-left 30s linear infinite;
+    }
+
+    /* Pause animation on hover */
+    .marquee:hover .marquee-track {
+      animation-play-state: paused;
+    }
+
+    /* KEYFRAMES */
+    @keyframes scroll-left {
+      from {
+        transform: translateX(0);
+      }
+
+      to {
+        transform: translateX(-50%);
+      }
+    }
+
+    /* WHY CARD */
+    .why-card {
+      min-width: 260px;
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border-radius: 16px;
+      padding: 25px 20px;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    /* ICON */
+    .why-card i {
+      font-size: 38px;
+      color: #facc15;
+      /* gold */
+      margin-bottom: 15px;
+    }
+
+    /* TITLE */
+    .why-card h5 {
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+
+    /* TEXT */
+    .why-card p {
+      font-size: 14px;
+      color: #d1d5db;
+      margin: 0;
+    }
+
+    /* HOVER EFFECT */
+    .why-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      background: rgba(250, 204, 21, 0.12);
+      border-color: #facc15;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .why-card {
+        min-width: 220px;
+      }
+    }
+
+    /* //////////// */
+    /* AMENITIES SECTION */
+    #amenities {
+      background: linear-gradient(135deg, #f8fafc, #eef2f7);
+    }
+
+    /* SECTION TITLE */
+    #amenities h2 {
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #0f172a;
+    }
+
+    /* CARD WRAPPER */
+    .amenity-card {
+      perspective: 1200px;
+    }
+
+    /* INNER FLIP CARD */
+    .amenity-inner {
+      position: relative;
+      width: 100%;
+      height: 190px;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease;
+      border-radius: 16px;
+    }
+
+    /* FLIP ON HOVER */
+    .amenity-card:hover .amenity-inner {
+      transform: rotateY(180deg);
+
+    }
+
+
+    /* FRONT & BACK COMMON */
+    .amenity-front,
+    .amenity-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    /* FRONT */
+    .amenity-front {
+      background: #ffffff;
+    }
+
+    .amenity-front i {
+      color: #d4af37;
+      /* luxury gold */
+    }
+
+    .amenity-front h6 {
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      color: #1e293b;
+    }
+
+    /* BACK */
+    .amenity-back {
+      background: linear-gradient(135deg, #0f172a, #020617);
+      color: #e5e7eb;
+      transform: rotateY(180deg);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* SUBTLE FLOAT EFFECT */
+    .amenity-card:hover {
+      transform: translateY(-6px);
+      transition: transform 0.4s ease;
+    }
+
+    /* MOBILE IMPROVEMENTS */
+    @media (max-width: 576px) {
+      .amenity-inner {
+        height: 170px;
+      }
+    }
+
+    /* LIGHTBOX STYLES */
+    /* HERO SECTION */
+    .rooms-hero {
+      height: 70vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb");
+      background-size: cover;
+      background-position: center;
+      /* margin-top: 70px; */
+      /* navbar height */
+    }
+
+    .rooms-hero h1 {
+      letter-spacing: 1px;
+    }
+
+    .hero-breadcrumb-link {
+      color: #ffc107;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .hero-breadcrumb-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    /* CUSTOM BREADCRUMB SEPARATOR */
+
+    /* REMOVE DEFAULT "/" AND ADD >>>> */
+    .breadcrumb-item+.breadcrumb-item::before {
+      content: ">>>>";
+      color: #ffc107;
+      /* gold */
+      padding: 0 10px;
+      font-weight: 600;
+    }
+
+    /* CHANGE BREADCRUMB SEPARATOR */
+    .breadcrumb {
+      --bs-breadcrumb-divider: ">>";
+    }
+
+
+    .amenities-hero {
+      height: 80vh;
+      background:
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("https://images.unsplash.com/photo-1542314831-068cd1dbfeeb");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .amenities-hero h1 {
+      color: rgba(var(--bs-warning-rgb), var(--bs-text-opacity)) !important;
+    }
+
+    .amenities-hero p {
+      color: rgb(240, 244, 245)
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+      padding: 0 4px;
+      color: #edf6fa !important;
+    }
+
+   .gallery-hero {
+  height: 80vh;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url("https://images.unsplash.com/photo-1608198399988-341f712c3711?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D")
+    center / cover no-repeat;
+}
+
+
+    /* BOOKING HERO FULL PAGE */
+    .booking-hero {
+      min-height: 80vh;
+      background: url("https://images.unsplash.com/photo-1566073771259-6a8506099945") center/cover no-repeat;
+      position: relative;
+      padding-top: 80px;
+      /* navbar space */
+    }
+
+    /* Dark overlay */
+    .booking-hero .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Booking card */
+    .booking-card {
+      background: #ffffff;
+      border-radius: 16px;
+    }
+
+    /* Inputs styling */
+    .booking-card .form-control,
+    .booking-card .form-select {
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    /* Button */
+    .booking-card .btn-warning {
+      border-radius: 30px;
+      font-size: 1.05rem;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 768px) {
+      .booking-card {
+        padding: 2rem 1.5rem;
+      }
+    }
+
+    /* ROOM HERO */
+    .room-hero {
+      min-height: 80vh;
+      background: url("https://images.unsplash.com/photo-1566073771259-6a8506099945") center/cover no-repeat;
+      position: relative;
+    }
+
+    .room-hero .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    /* Breadcrumb links */
+    .hero-breadcrumb-link {
+      color: #ffc107;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero-breadcrumb-link:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    /* Breadcrumb separator */
+    .breadcrumb-item+.breadcrumb-item::before {
+      content: ">>>>";
+      color: #ffc107;
+      padding: 0 10px;
+      font-weight: 600;
+    }
+
+    /* HERO */
+    .luxury-hero {
+      height: 100vh;
+      background: url("https://plus.unsplash.com/premium_photo-1661875135365-16aab794632f?q=80&w=953&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.55);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    /* BREADCRUMB LINKS */
+    .hero-breadcrumb-link {
+      color: #ffc107;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero-breadcrumb-link:hover {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+      content: ">>>>";
+      color: #ffc107;
+      padding: 0 10px;
+      font-weight: 600;
+    }
+
+    /* ROOM DETAILS */
+    .room-details ul li {
+      margin-bottom: 10px;
+      font-size: 1.05rem;
+    }
+
+    /* GALLERY */
+    .gallery-item img {
+      width: 100%;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    /* FOOTER */
+    .footer-section {
+      background: #111;
+      color: #fff;
+    }
+
+    .footer-links a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: #ffc107;
+    }
+
+    .luxury-hero {
+      height: 80vh;
+      background: url("https://plus.unsplash.com/premium_photo-1661875135365-16aab794632f?q=80&w=953&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .luxury-hero {
+      height: 80vh;
+      background: url("https://plus.unsplash.com/premium_photo-1661875135365-16aab794632f?q=80&w=953&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .family-hero {
+      height: 80vh;
+      background: url("https://images.unsplash.com/photo-1606787366502-801098a5eca5?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    /* HERO SECTION */
+    .ocean-hero {
+      height: 80vh;
+      background: url("https://images.unsplash.com/photo-1561451810-f473e17eac6d?q=80&w=1170&auto=format&fit=crop") center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .presidential-hero {
+      height: 80vh;
+      background: url("https://plus.unsplash.com/premium_photo-1661875135365-16aab794632f?q=80&w=953&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+    }
+
+    /* DARK OVERLAY */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      /* adjust opacity for darkness */
+    }
+
+    /* HERO CONTENT */
+    .hero-content {
+      position: relative;
+      /* ensures content is above overlay */
+      z-index: 2;
+    }
+
+    .hero-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+
+    .hero-content p {
+      font-size: 1.2rem;
+    }
+
+    .hero-breadcrumb-link {
+      color: #ffc107;
+      /* gold */
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .hero-breadcrumb-link:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+
+    .breadcrumb-item+.breadcrumb-item::before {
+      content: ">>";
+      color: #ffc107;
+      padding: 0 8px;
+      font-weight: 600;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2rem;
+      }
+
+      .hero-content p {
+        font-size: 1rem;
+      }
+    }
+
+    /* ROOM HERO */
+    .room-hero {
+      min-height: 80vh;
+      background: url("https://images.unsplash.com/photo-1566073771259-6a8506099945") center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* DARK OVERLAY */
+    .room-hero .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+      pointer-events: none;
+      /* ✅ allows clicking gallery */
+    }
+
+    /* HERO CONTENT */
+    .room-hero .container {
+      position: relative !important;
+      z-index: 2;
+    }
+
+    .room-card img {
+      transition: opacity 0.3s ease !important;
+    }
+
+    .room-card:hover img {
+      /* opacity: 0.9 !important; */
+      /* slightly dim on hover */
+      transform: none !important;
+      /* no zoom */
+    }
+
+    /* HERO CAROUSEL TEXT RESPONSIVE */
+    .carousel-caption h1.head1 {
+      font-size: 3rem;
+      /* default large */
+    }
+
+    .carousel-caption p {
+      font-size: 1.2rem;
+    }
+
+    .carousel-caption .btn {
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+    }
+
+    /* ROOMS CAROUSEL IMAGES */
+    .room-img-fixed {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    @media (max-width: 992px) {
+      .carousel-caption h1.head1 {
+        font-size: 2.5rem;
+      }
+
+      .carousel-caption p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .carousel-caption h1.head1 {
+        font-size: 2rem;
+      }
+
+      .carousel-caption p {
+        font-size: 0.9rem;
+      }
+
+      .carousel-caption .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+      }
+
+      .room-img-fixed {
+        height: 200px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .carousel-caption h1.head1 {
+        font-size: 1.5rem;
+      }
+
+      .carousel-caption p {
+        font-size: 0.8rem;
+      }
+
+      .carousel-caption .btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+      }
+
+      .room-img-fixed {
+        height: 150px;
+      }
+
+      /* Reduce padding for sections */
+      section.py-5 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+      }
+    }
+
+    /* RESPONSIVE MAP */
+    .map-container iframe {
+      width: 100% !important;
+      height: 300px !important;
+    }
+
+    /* GALLERY IMAGES */
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+
+    /* AMENITIES CARDS */
+    .amenity-card {
+      width: 100%;
+    }
+
+    /* FIX FOOTER ON MOBILE */
+    .footer-section .col-lg-4,
+    .footer-section .col-lg-3,
+    .footer-section .col-lg-2 {
+      margin-bottom: 1.5rem;
+    }
+
+    /* SCROLL TO TOP BUTTON */
+    #scrollTopBtn {
+      bottom: 20px;
+      right: 20px;
+      width: 45px;
+      height: 45px;
+      font-size: 1.2rem;
+    }
+
+    /* HORIZONTAL SCROLL FOR WHY-CHOOSE-US ON MOBILE */
+    .marquee {
+      overflow-x: auto;
+      white-space: nowrap;
+      padding-bottom: 1rem;
+    }
+
+    .marquee-track {
+      display: inline-flex;
+    }
+
+    .why-card {
+      min-width: 220px;
+      display: inline-block;
+      margin-right: 1rem;
+    }
+
+    /* ===== MOBILE NAVBAR FIX ONLY ===== */
+    @media (max-width: 991px) {
+
+      .navbar {
+        padding-top: 6px;
+        padding-bottom: 6px;
+      }
+
+      .navbar-brand img {
+        height: 42px !important;
+        width: auto;
+      }
+
+      .navbar-toggler {
+        padding: 4px 6px;
+        font-size: 14px;
+      }
+
+      .navbar-nav .nav-link {
+        padding: 6px 0;
+        font-size: 14px;
+      }
+
+      .navbar .btn {
+        padding: 6px 14px;
+        font-size: 14px;
+      }
+    }
+    .amenity-back h4{
+      color:#c9a24d;
+    }
+
+
+    /* ////////offers////// */
+    /* OFFERS HERO */
+.offers-hero {
+  height: 80vh !important;
+  background:
+    linear-gradient(rgba(0,0,0,.65), rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1595576508898-0ad5c879a061?q=80&w=1074&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D ") !important;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  /* margin-top: 90px; */
+}
+
+
+/* OFFER CARD */
+.offer-card {
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.12);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.offer-card:hover {
+  transform: translateY(-8px);
+}
+
+.offer-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+/* BADGE */
+.offer-badge {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  background: #ffc107;
+  color: #000;
+  padding: 6px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 20px;
+}
+.offercta{
+  background-color:#f0eaea;
+}
+nav a.active {
+    color: #d4af37;
+    font-weight: 600;
+    position: relative;
+}
+
+nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #d4af37;
+}
+/* Gallery image zoom on hover */
+[data-fancybox="gallery"] {
+  display: block;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+[data-fancybox="gallery"] img {
+  transition: transform 0.4s ease;
+}
+
+[data-fancybox="gallery"]:hover img {
+  transform: scale(1.08);
+}
+.offer-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 15px;
+  border: 2px solid transparent;
+  transition: .4s;
+  pointer-events: none; /* 🔥 THIS FIXES BUTTON CLICKS */
+}
+
+.offer-card:hover::after {
+  border-color: #ffc107;
+}
+.hero-carousel .carousel-control-prev-icon,
+.hero-carousel .carousel-control-next-icon {
+  transform: scale(1.8);
+}
+/* Increase HERO carousel control width only */
+.hero-carousel .carousel-control-prev,
+.hero-carousel .carousel-control-next {
+  width: 18%;
+}
+.footer-social{
+  text-decoration:none;
+}
+
+.one,.two,.three{
+      text-decoration:none;
+}
+.room-card {
+  box-shadow: none;
+}
+
+.room-card:hover {
+  box-shadow: none !important;
+  transform: none;
+}
+.rooms-hero {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* IMPORTANT */
+  padding-top: 120px;   /* equal compensation for fixed navbar */
+  padding-bottom: 80px;
+
+  background-size: cover;
+  background-position: center;
+}
+.amenities-hero{
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* IMPORTANT */
+  padding-top: 120px;   /* equal compensation for fixed navbar */
+  padding-bottom: 80px;
+
+  background-size: cover;
+  background-position: center;
+}
+.gallery-hero{
+  height: 60vh !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  /* IMPORTANT */
+  padding-top: 120px !important;   /* equal compensation for fixed navbar */
+  padding-bottom: 80px;
+
+  background-size: cover;
+  background-position: center;
+}
+
+
+
+
+
+
+

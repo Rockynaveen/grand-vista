@@ -5,6 +5,9 @@ import Reviews from "../components/Testimonial";
 import { rooms } from "./Roomdata";
 import Offers from "../components/Offers";
 
+
+
+
 const Homepage = () => {
   const amenities = [
     { icon: "fa-solid fa-wifi", title: "Free Wi-Fi", description: "High-speed internet in every room" },
@@ -227,12 +230,12 @@ const Homepage = () => {
                   <div className="p-4">
                     <h5 className="fw-bold">{item.title}</h5>
                     <p className="text-muted">{item.description}</p>
-                    <a
-                      href="booking.html"
+                   <Link
+                      to="/book-now"
                       className="btn btn-warning fw-semibold w-100"
                     >
                       Book Now
-                    </a>
+                    </Link>
                   </div>
 
                 </div>
@@ -388,6 +391,8 @@ const Homepage = () => {
           </div>
         </div>
       </section>
+      
+     
 
 
       <Footer />

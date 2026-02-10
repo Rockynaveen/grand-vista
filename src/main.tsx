@@ -10,6 +10,9 @@ import Gallery from "./pages/Gallerypage";
 import Offers from "./components/Offers";
 import Contact from "./pages/Contactpage";
 import BookNowPage from "./pages/Booknowpage";
+import Booknowpage from "./pages/Booknowpage";
+
+
 
 import "./vista.css";
 
@@ -24,8 +27,11 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/offers" element={<Offers />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/booknow" element={<BookNowPage />} />
-
         <Route path="/rooms/:slug" element={<RoomDetailsPage />} />
+
+        <Route path="/book-now" element={<Booknowpage />} />
+
+
       </Routes>
     </BrowserRouter>
   </StrictMode>
